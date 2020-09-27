@@ -9,7 +9,10 @@ import { ConfigModule } from '@nestjs/config';
   imports: [
     ProductosModule,
     ConfigModule.forRoot(),
-    MongooseModule.forRoot(process.env.DB_AUTH),
+    MongooseModule.forRoot(
+      process.env.DB_AUTH ||
+        'mongodb+srv://testuser:4APWK5m^CuT8@guiltyspark.qsbai.mongodb.net/RoomieTest?retryWrites=true&w=majority',
+    ),
   ],
   controllers: [AppController],
   providers: [AppService],
