@@ -26,6 +26,8 @@ Para fines de testing, se realiza el fallback al string de conexión proporciona
 
 ## Endpoints
 
+La documentación también se puede consultar en https://roomie-backend.herokuapp.com/docs/
+
 # GET /productos
 
 Lista todos los productos
@@ -34,9 +36,19 @@ Lista todos los productos
 
 Lista un producto en especifico
 
+# POST /productos
+
+Inserta un nuevo producto
+
+`{ "NameProduct": "Doritos", "Category": "Botanas", "Description": "Nacho", "ProductQuantity": 100, "Status": true }`
+
 # PUT /productos/:id
 
 Actualiza un producto en especifico
+
+Ejemplo de body:
+
+`{ "NameProduct": "Doritos", "Category": "Botanas", "Description": "Nacho", "ProductQuantity": 100, "Status": true }`
 
 # DELETE /productos/:id
 
